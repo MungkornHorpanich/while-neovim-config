@@ -31,6 +31,7 @@ return {
           "yaml",
           "html",
           "css",
+          "rust",
           "prisma",
           "markdown",
           "markdown_inline",
