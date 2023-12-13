@@ -1,1 +1,1 @@
-# while-neovim-config
+# 2024 Neovim Configuration
