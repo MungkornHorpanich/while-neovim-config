@@ -4,3 +4,8 @@ This is the list of plugins I use for this configuration
 - Lualine
 - NvimTree
 - Mason
+- bufferline
+- dressing
+- Transparent vim
+- vim-maximizer
+- treesitter
