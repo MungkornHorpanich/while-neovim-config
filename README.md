@@ -9,3 +9,4 @@ This is the list of plugins I use for this configuration
 - Transparent vim
 - vim-maximizer
 - treesitter
+- Telescope
