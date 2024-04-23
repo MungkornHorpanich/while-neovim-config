@@ -1,8 +1,17 @@
 return {
-  "rebelot/kanagawa.nvim",
-  priority = 1000,
-  config = function()
-    vim.cmd("colorscheme kanagawa")
-  end
+  {
+    "EdenEast/nightfox.nvim",
+    priority = 1000,
+    config = function()
+      local nightfox = require('nightfox')
+      nightfox.setup({
+        options = {
+          transparent = true
+        }
+      })
+
+      vim.cmd.colorscheme("carbonfox")
+    end,
+  },
 }
 

@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({{import = "while.plugins"}, {import = "while.plugins.lsp"}}, {
   install = {
-    colorscheme = { "kanagawa-dragon" },
+    colorscheme = { "nightfox" },
   },
   checker = {
     enabled = true,
