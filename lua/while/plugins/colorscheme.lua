@@ -10,7 +10,7 @@ return {
         }
       })
 
-      vim.cmd.colorscheme("carbonfox")
+      vim.cmd.colorscheme("nightfox")
     end,
   },
 }
