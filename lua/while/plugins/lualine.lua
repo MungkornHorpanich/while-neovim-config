@@ -8,7 +8,7 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        theme = 'iceberg_dark',
+        theme = 'nord',
       },
       sections = {
         lualine_x = {

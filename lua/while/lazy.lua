@@ -11,9 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{import = "while.plugins"}, {import = "while.plugins.lsp"}}, {
+require("lazy").setup({{import = "while.plugins"}, {import = "while.plugins.lsp"}}, {opts = {colorscheme = "solarized-osaka"}}, {
   install = {
-    colorscheme = { "nightfox" },
+    colorscheme = { "solarized-oaska" },
   },
   checker = {
     enabled = true,
