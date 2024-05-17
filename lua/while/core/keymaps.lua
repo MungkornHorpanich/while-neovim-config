@@ -36,5 +36,6 @@ keymap.set(
 	"n",
 	"<leader>zz",
 	"<cmd>hi Normal ctermbg=NONE guibg=NONE<CR>",
-	{ desc = "change neovim backgroud opacity" }
+	{ desc = "change neovim backgroud opacity 0.5" }
 )
+keymap.set("n", "<leader>zx", "<cmd>set background=dark<CR>", { desc = "change neovim backgroud opacity to 1" })
