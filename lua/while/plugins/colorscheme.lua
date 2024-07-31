@@ -1,13 +1,10 @@
 return {
 	{
-		"folke/tokyonight.nvim",
+		"HoNamDuong/hybrid.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {
-			transparent = true,
-		},
 		config = function()
-			vim.cmd("colorscheme tokyonight-storm")
+			vim.cmd("colorscheme hybrid")
 		end,
 	},
 }
