@@ -7,7 +7,6 @@ return {
 			vim.g.gruvbox_material_contrast = "hard"
 			vim.g.gruvbox_material_transparent_background = 2
 			vim.g.gruvbox_material_better_performance = 1
-			vim.cmd.colorscheme("gruvbox-material")
 		end,
 	},
 }
