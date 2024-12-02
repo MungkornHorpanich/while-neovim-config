@@ -1,12 +1,12 @@
 return {
 	{
-		"sainnhe/gruvbox-material",
-		lazy = false,
-		priority = 1000,
+		"folke/tokyonight.nvim",
 		config = function()
-			vim.g.gruvbox_material_contrast = "hard"
-			vim.g.gruvbox_material_transparent_background = 2
-			vim.g.gruvbox_material_better_performance = 1
+			require("tokyonight").setup({
+				style = "storm", -- Options: "night", "storm", "day"
+				transparent = false, -- Set to true for a transparent background
+				terminal_colors = true,
+			})
 		end,
 	},
 }

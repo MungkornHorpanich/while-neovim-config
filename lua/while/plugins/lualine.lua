@@ -8,7 +8,7 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = "ayu_mirage",
+				theme = "base16",
 			},
 			sections = {
 				lualine_a = { "mode" },
