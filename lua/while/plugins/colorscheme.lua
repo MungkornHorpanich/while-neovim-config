@@ -31,15 +31,6 @@ return {
 		end,
 	},
 	{
-		"Shatur/neovim-ayu",
-		config = function()
-			require("ayu").setup({
-				mirage = true,
-				transparent = true,
-			})
-		end,
-	},
-	{
 		"folke/tokyonight.nvim",
 		config = function()
 			require("tokyonight").setup({
