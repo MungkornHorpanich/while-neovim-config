@@ -1,24 +1,83 @@
 return {
+	"tjdevries/colorbuddy.nvim",
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+			})
+		end,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				styles = {
+					bold = true,
+					italic = true,
+					transparency = true,
+				},
+			})
+		end,
+	},
+	{
+		"sainnhe/gruvbox-material",
+		config = function()
+			vim.g.gruvbox_material_contrast = "hard"
+			vim.g.gruvbox_material_transparent_background = 2
+			vim.g.gruvbox_material_better_performance = 1
+		end,
+	},
+	{
+		"Shatur/neovim-ayu",
+		config = function()
+			require("ayu").setup({
+				mirage = true,
+				transparent = true,
+			})
+		end,
+	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
-				style = "moon", -- Options: "storm", "moon", "night", "day"
-				transparent = true, -- Enable transparency
-				terminal_colors = true, -- Apply theme to terminal colors
+				transparent = true,
 				styles = {
-					sidebars = "transparent", -- Style for sidebars (e.g., NvimTree, Telescope)
-					floats = "transparent", -- Style for floating windows
+					comments = { italic = true },
+					keywords = { italic = true },
+					sidebars = "transparent",
+					floats = "transparent",
 				},
-				on_highlights = function(highlights, colors)
-					highlights.NormalFloat = { bg = "none" }
-					highlights.FloatBorder = { bg = "none" }
-				end,
 			})
-
-			vim.cmd("colorscheme tokyonight-storm")
+		end,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		config = function()
+			require("gruvbox").setup({
+				transparent_mode = true,
+				contrast = "hard",
+			})
+		end,
+	},
+	{
+		"navarasu/onedark.nvim",
+		config = function()
+			require("onedark").setup({
+				transparent = true,
+			})
+		end,
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("nightfox").setup({
+				options = {
+					transparent = true,
+				},
+			})
 		end,
 	},
 }
