@@ -1,14 +1,14 @@
 require("while.core")
 require("while.lazy")
 
-vim.cmd("hi NvimTreeNormalNC guibg=NONE")
-vim.cmd("hi NvimTreeNormal guibg=NONE")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.cmd("highlight ColorColumn ctermbg=0 guibg=#555555")
-vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "none" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#9EBDE8" })
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 vim.cmd("colorscheme rose-pine-main")
+vim.cmd([[
+  highlight NormalFloat guibg=#1e222a guifg=#c8d0e0 " Opaque for floating windows
+  highlight Pmenu guibg=#1e222a guifg=#c8d0e0       " Opaque completion menu
+  highlight PmenuSel guibg=#3e4452 guifg=#ffffff    " Selected item in completion menu
+  highlight StatusLine guibg=#1e222a guifg=#c8d0e0  " Opaque status line
+  highlight VertSplit guibg=NONE guifg=#3e4452      " Transparent vertical splits
+  highlight LineNr guibg=NONE guifg=#5c6370         " Line numbers
+  highlight CursorLineNr guibg=NONE guifg=#ffffff   " Cursor line number
+  highlight SignColumn guibg=NONE                  " Transparent sign column
+]])
