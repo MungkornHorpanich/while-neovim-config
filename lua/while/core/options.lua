@@ -2,6 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 opt.relativenumber = true
 
 -- tabs & indentation
