@@ -88,5 +88,11 @@ return {
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
+		config = function()
+			-- Default options:
+			require("kanagawa").setup({
+				transparent = true, -- do not set background color
+			})
+		end,
 	},
 }
