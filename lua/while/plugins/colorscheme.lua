@@ -1,3 +1,8 @@
+function ColorMyPencils()
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
 return {
 	"tjdevries/colorbuddy.nvim",
 	{
@@ -88,11 +93,5 @@ return {
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
-		config = function()
-			-- Default options:
-			require("kanagawa").setup({
-				transparent = true, -- do not set background color
-			})
-		end,
 	},
 }
