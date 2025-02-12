@@ -16,6 +16,10 @@ return {
 	},
 
 	{
+		"phha/zenburn.nvim",
+	},
+
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		config = function()
