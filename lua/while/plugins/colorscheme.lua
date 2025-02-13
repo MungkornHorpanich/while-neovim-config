@@ -1,18 +1,34 @@
-function ColorMyPencils()
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
-	"tjdevries/colorbuddy.nvim",
+	{
+		"folke/tokyonight.nvim",
+		config = function()
+			local function apply_transparency()
+				vim.opt.background = "dark"
+				vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+				vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+			end
+
+			apply_transparency()
+
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				callback = apply_transparency,
+			})
+
+			require("tokyonight").setup({
+				styles = {
+					comments = { italic = true },
+					keywords = { italic = true },
+					sidebars = "transparent",
+					floats = "transparent",
+				},
+			})
+			vim.cmd.colorscheme("tokyonight")
+		end,
+	},
+
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		config = function()
-			require("catppuccin").setup({
-				transparent_background = true,
-			})
-		end,
 	},
 
 	{
@@ -24,7 +40,6 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
-				disable_background = true,
 				styles = {
 					italic = false,
 				},
@@ -39,20 +54,7 @@ return {
 			vim.g.gruvbox_material_better_performance = 1
 		end,
 	},
-	{
-		"folke/tokyonight.nvim",
-		config = function()
-			require("tokyonight").setup({
-				transparent = true,
-				styles = {
-					comments = { italic = true },
-					keywords = { italic = true },
-					sidebars = "transparent",
-					floats = "transparent",
-				},
-			})
-		end,
-	},
+
 	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
@@ -65,33 +67,24 @@ return {
 	{
 		"navarasu/onedark.nvim",
 		config = function()
-			require("onedark").setup({
-				transparent = true,
-			})
+			require("onedark").setup({})
 		end,
 	},
 	{
 		"EdenEast/nightfox.nvim",
 		config = function()
-			require("nightfox").setup({ options = {
-				transparent = true,
-			} })
+			require("nightfox").setup({ options = {} })
 		end,
 	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
-		config = function()
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-		end,
 	},
 
 	{
 		"projekt0n/github-nvim-theme",
 		name = "github-theme",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		lazy = false,
+		priority = 1000,
 	},
 
 	{
