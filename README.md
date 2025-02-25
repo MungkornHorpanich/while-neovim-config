@@ -6,8 +6,6 @@ This is the list of plugins I use for this configuration
 - Lualine
 - NvimTree
 - Mason
-- dressing
-- Transparent vim
 - vim-maximizer
 - treesitter
 - Telescope
