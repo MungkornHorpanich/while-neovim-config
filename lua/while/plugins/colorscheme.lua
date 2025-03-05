@@ -1,19 +1,12 @@
+function ColorMyPencils()
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
 return {
 	{
 		"folke/tokyonight.nvim",
 		config = function()
-			local function apply_transparency()
-				vim.opt.background = "dark"
-				vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-				vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-			end
-
-			apply_transparency()
-
-			vim.api.nvim_create_autocmd("ColorScheme", {
-				callback = apply_transparency,
-			})
-
 			require("tokyonight").setup({
 				styles = {
 					comments = { italic = true },
