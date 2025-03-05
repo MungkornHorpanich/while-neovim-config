@@ -87,6 +87,9 @@ return {
 			-- Default options:
 			require("kanagawa").setup({
 				transparent = true, -- do not set background color
+				colors = {
+					theme = { all = { ui = { bg_gutter = "none" } } },
+				},
 			})
 		end,
 	},
